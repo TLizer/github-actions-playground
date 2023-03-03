@@ -14,4 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Environment
-        run: "echo Here is my little secret, I am running on: ${{ github.event.inputs.environment }}"
+        run: "echo Here is my little secret: ${{ secrets.SECRET }}, I am running on: ${{ github.event.inputs.environment }}"
