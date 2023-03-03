@@ -12,6 +12,7 @@ on:
 jobs:
   check_environment:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - name: Check Environment
         run: "echo Here is my little secret: ${{ secrets.SECRET }}, I am running on: ${{ github.event.inputs.environment }}"
