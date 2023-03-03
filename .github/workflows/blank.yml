@@ -1,0 +1,17 @@
+name: Playground
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment workflow will be ran'
+        type: environment
+        required: true
+  
+
+jobs:
+  check_environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Environment
+        run: "echo Here is my little secret: #{{ secrets.SECRET }}"
